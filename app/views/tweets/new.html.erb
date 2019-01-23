@@ -1,5 +1,23 @@
-<h1>New Tweet</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen"  />
+</head>
+<body>
+    <header class="header"><h1>New Tweet</h1></header>    
+    
+    <div><%= render 'form', tweet: @tweet %></div>
 
-<%= render 'form', tweet: @tweet %>
 
-<%= link_to 'Back', tweets_path %>
+
+    
+    <footer class="footer"><%= link_to 'Back', tweets_path %></footer>
+
+
+</body>
+</html>
+

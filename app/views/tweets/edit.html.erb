@@ -1,6 +1,27 @@
-<h1>Editing Tweet</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>edit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" />
+    <script src="main.js"></script>
+</head>
+<body>
+<header class="header">
+    <h1>Editing Tweet</h1>
+</header>
 
-<%= render 'form', tweet: @tweet %>
+<div>
+    <%= render 'form', tweet: @tweet %>
+</div>
 
-<%= link_to 'Show', @tweet %> |
-<%= link_to 'Back', tweets_path %>
+<footer class="footer">
+    <%= link_to 'Show', @tweet %> |
+    <%= link_to 'Back', tweets_path %>
+</footer>
+    
+</body>
+</html>
+

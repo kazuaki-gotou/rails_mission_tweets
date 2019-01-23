@@ -1,27 +1,46 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen"/>
+  
+</head>
+<body>
+  
+    <p id="notice"><%= notice %></p>
+  <header class="header">
+    <h1>Tweets</h1>
+  </header>
 
-<h1>Tweets</h1>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Tweet</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Tweet</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+      <tbody>
+        <% @tweets.each do |tweet| %>
+          <tr>
+            <td><%= tweet.tweet %></td>
+            <td><%= link_to 'Show', tweet %></td>
+            <td><%= link_to 'Edit', edit_tweet_path(tweet) %></td>
+            <td><%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <footer class="footer">
 
-  <tbody>
-    <% @tweets.each do |tweet| %>
-      <tr>
-        <td><%= tweet.tweet %></td>
-        <td><%= link_to 'Show', tweet %></td>
-        <td><%= link_to 'Edit', edit_tweet_path(tweet) %></td>
-        <td><%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <%= link_to 'New Tweet', new_tweet_path %>
 
-<br>
+  </footer>
+</body>
+</html>
 
-<%= link_to 'New Tweet', new_tweet_path %>

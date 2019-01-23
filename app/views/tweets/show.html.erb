@@ -1,9 +1,27 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Tweet:</strong>
-  <%= @tweet.tweet %>
-</p>
-
-<%= link_to 'Edit', edit_tweet_path(@tweet) %> |
-<%= link_to 'Back', tweets_path %>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" />
+  
+</head>
+<body>
+<header class="header">
+  <p id="notice"><%= notice %></p>
+</header>
+<div>
+  <p>
+    <strong>Tweet:</strong>
+    <%= @tweet.tweet %>
+  </p>
+</div>
+<footer class="footer">
+  <%= link_to 'Edit', edit_tweet_path(@tweet) %> |
+  <%= link_to 'Back', tweets_path %>
+</footer>
+  
+</body>
+</html>
